@@ -1,9 +1,9 @@
 <?php $this->load->view('layouts/base_start') ?>
 
 <div class="container">
-  <legend>Daftar Mahasiswa</legend>
+  <legend>Daftar Pengguna</legend>
   <div class="col-xs-12 col-sm-12 col-md-12">
-  <form class="form-inline" action="<?php echo site_url('mahasiswa/index/') ?>" method="post">
+  <form class="form-inline" action="<?php echo site_url('user/index/') ?>" method="post">
       <input class="form-control" type="text" name="search" value="" placeholder="Search...">
       <input class="btn btn-default" type="submit" name="filter" value="Go">
   </form>
@@ -12,24 +12,24 @@
         <th>No</th>
         <th>Nama</th>
         <th width="200">No Telp</th>
-        <th>Mata Kuliah</th>
+        <th>Tujuan</th>
         <th>
-          <a class="btn btn-primary" href="<?php echo site_url('admin/create/') ?>">
+          <a class="btn btn-primary" href="<?php echo site_url('user/create/') ?>">
             Tambah
           </a>
         </th>
       </thead>
-      <?php if(isset($mahasiswa)) { ?>
+      <?php if(isset($user)) { ?>
       <tbody>
-        <?php foreach($mahasiswa as $row) { ?>
+        <?php foreach($user as $row) { ?>
         <tr>
           <td><?php echo $start+=1 ?></td>
           <td><?php echo $row->nama ?></td>
-          <td><?php echo $row->no ?></td>
-          <td><?php echo $row->nama_matkul ?></td>
+          <td><?php echo $row->telepon ?></td>
+          <td><?php echo $row->tujuan ?></td>
           <td>
-            <?php echo form_open('admin/destroy/'.$row->id); ?>
-            <a class="btn btn-info" href="<?php echo site_url('admin/edit/'.$row->id) ?>">
+            <?php echo form_open('user/destroy/'.$row->id); ?>
+            <a class="btn btn-info" href="<?php echo site_url('user/edit/'.$row->id) ?>">
               Ubah
             </a>
             <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</button>
@@ -40,12 +40,12 @@
       </tbody>
     </table>
 
-    <?php echo $links; 
+     <?php echo $links;
       }
       else
       {
         echo "Tidak Ada Data";
-      } ?>
+      } ?> 
   
   </div>
 </div>

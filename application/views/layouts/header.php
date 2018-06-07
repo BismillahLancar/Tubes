@@ -9,15 +9,15 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="<?php echo base_url() ?>">
-      Website CI
+      Admin Page
     </a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="<?php echo site_url('mahasiswa/') ?>">Mahasiswa</a>
-      <li><a href="<?php echo site_url('matakuliah/') ?>">Matakuliah</a>
+      <li><a href="<?php echo site_url('user/') ?>">Pengguna</a>
+      <li><a href="<?php echo site_url('jurusan/') ?>">Tujuan</a>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
