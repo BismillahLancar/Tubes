@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>MAINTENANCE</title>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>  
+  <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/bootstrap.css">
+  <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.js"></script>
+  <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap.js"></script>  
 </head>
 <body>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
