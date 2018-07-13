@@ -27,9 +27,9 @@ class Login extends CI_Controller {
         if($set)
         { 
             $log = [
-                'id' => $set->id_user,
-                'username' => $set->nama_user,
-                'role' => $set->role,
+                'id' => $set->id_admin,
+                'username' => $set->username,
+                'nama' => $set->nama,
                 'status' => 'Logged'
             ];
             $this->session->set_userdata($log);

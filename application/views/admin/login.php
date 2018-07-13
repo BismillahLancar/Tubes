@@ -1,66 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Bootstrap Admin Theme v3</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Bootstrap -->
-	<link href="<?php echo base_url('assets/')?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<!-- styles -->
-	<link href="<?php echo base_url('assets/')?>css/styles.css" rel="stylesheet">
-
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-	<![endif]-->
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="<?php echo base_url('vendor2/images/icons/favicon.ico')?>"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor2/vendor/bootstrap/css/bootstrap.min.css')?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor2/fonts/font-awesome-4.7.0/css/font-awesome.min.css')?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor2/vendor/animate/animate.css')?>">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor2/vendor/css-hamburgers/hamburgers.min.css')?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor2/vendor/select2/select2.min.css')?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor2/css/util.css')?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor2/css/main.css')?>">
+<!--===============================================================================================-->
 </head>
-<body class="login-bg">
-
-<?php $this->load->view('header') ?>
-
-	<div class="page-content container">
-		<div class="row">
-			<div class="col-md-4 col-md-offset-4">
-				<div class="login-wrapper">
-					<div class="box">
-						<div class="content-wrap">
-                            <?php if($this->session->status=='Logged') { ?>
-							<h6>Halo, <?php echo $this->session->username ?>!</h6>
-							<h5>Anda Login Sebagai,</h5>
-							<h4><?php echo $this->session->role ?></h4>
-                            <?php } else { ?>
-							<h6>Sign In</h6>
-                            <?php echo form_open('login/login') ?>							
-							Username: <input class="form-control" type="text" id="user" name="user"
-								pattern="^[^\s]+$" required title="Harap diisi dengan benar"
-								placeholder="Masukkan username ...">
-							Password: <input class="form-control" type="password" id="pass" name="pass"
-								pattern="^[^\s]+$" required title="Harap diisi dengan benar"
-								placeholder="Masukkan Password ..." onmousemove="this.type='password'"
-								onmousedown="this.type='text'" onmouseup="this.type='password'">
-                            <?php echo $error; ?><br>
-							<button type="submit" class="btn btn-primary signup" id="login">Login</button>
-                            <?php echo form_close(); } ?>
-						</div>
-					</div>
-
-					<div class="already">
-						<a href="<?php echo site_url('home/') ?>">Kembali ke Web</a>
-					</div>
-
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="<?php echo base_url('vendor2/images/img-01.png') ?>" alt="IMG">
 				</div>
+				<?php if($this->session->status=='Logged') {
+					echo $this->session->username;
+					echo $this->session->nama;
+                    } else {
+						$data=['class'=>"login100-form validate-form"];
+						echo form_open('login/login',$data);
+				?>
+					<span class="login100-form-title">
+						Admin Login
+					</span>
+
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" id="user" name="user" placeholder="Username" 
+						pattern="^[^\s]+$" required title="Harap diisi dengan benar">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" id="pass" name="pass" placeholder="Password" 
+						pattern="^[^\s]+$" required title="Harap diisi dengan benar" 
+						onmousemove="this.type='password'" onmousedown="this.type='text'" onmouseup="this.type='password'">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="text-center">
+						<a href="<?php echo site_url('home/') ?>">Kembali ke Beranda</a>
+					</div>
+
+					<?php echo $error; ?>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" id="login">
+							Login
+						</button>
+					</div>
+
+					<?php echo form_close(); } ?>
+
+					<!-- <div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div> -->
+
+					<!-- <div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div> -->
 			</div>
 		</div>
 	</div>
+	
+	
 
+	
+<!--===============================================================================================-->	
+	<script src="<?php echo base_url('vendor2/vendor/jquery/jquery-3.2.1.min.js')?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url('vendor2/vendor/bootstrap/js/popper.js')?>"></script>
+	<script src="<?php echo base_url('vendor2/vendor/bootstrap/js/bootstrap.min.js')?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url('vendor2/vendor/select2/select2.min.js')?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url('vendor2/vendor/tilt/tilt.jquery.min.js')?>"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url('vendor2/js/main.js')?>"></script>
 
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="<?php echo base_url('assets/')?>js/jquery.js"></script>
-	<script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js') ?>"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="<?php echo base_url('assets/')?>bootstrap/js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url('assets/')?>js/custom.js"></script>
 </body>
 </html>

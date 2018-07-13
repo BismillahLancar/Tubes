@@ -1,208 +1,485 @@
-<?php $this->load->view('header');?>
-<html>
-<head>
-  <title>MAINTENANCE</title>
-  <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/bootstrap.css">
-  <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.js"></script>
-  <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap.js"></script>  
-</head>
-<body>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>  
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-        <li data-target="#myCarousel" data-slide-to="6"></li>         
-      </ol>
- 
-      <!-- deklarasi carousel -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="<?=base_url()?>assets/images/newroute_sbysoc_en.jpg" width="1440" height="423" class="img-responsive" alt="Image">
-          <div class="carousel-caption">
-          </div>
-        </div>
-        <div class="item">
-          <img src="<?=base_url()?>assets/images/lionair_webanner2.jpeg" class="img-responsive" alt="Image">
-          <div class="carousel-caption">
-           
-          </div>
-        </div>
-        <div class="item">
-          <img src="<?=base_url()?>assets/images/lionair_webanner3.jpeg" class="img-responsive" alt="Image">
-          <div class="carousel-caption">
-          
-          </div>
-        </div>
-        <div class="item">
-          <img src="<?=base_url()?>assets/images/ProgramKartuKreditGarudaBNI-HUT71BNI_MainBanner_Ind.png" class="img-responsive" alt="Image">
-          <div class="carousel-caption">
-           
-          </div>
-        </div>
-        <div class="item">
-          <img src="<?=base_url()?>assets/images/mainbanner_promo-business-class_Id-new.png" class="img-responsive" alt="Image">
-          <div class="carousel-caption">
-           
-          </div>
-        </div>        
-      </div>
- 
-      <!-- membuat panah next dan previous -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-   </div>
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="Colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>EASY</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="<?php echo base_url('assets/css/linearicons.css')?>">
+			<link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.css')?>">
+			<link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
+			<link rel="stylesheet" href="<?php echo base_url('assets/css/nice-select.css')?>">
+			<link rel="stylesheet" href="<?php echo base_url('assets/css/magnific-popup.css')?>">
+			<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+			<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css')?>">
+			<link rel="stylesheet" href="<?php echo base_url('assets/css/main.css')?>">
+		</head>
+		<body>
+
+			<!-- header -->
+			<?php $this->load->view('header'); ?>
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+				<div class="row fullscreen align-items-center justify-content-center" style="height: 915px;">
+					<div class="active-banner-carousel">
+						<div class="banner-content col-lg-12 col-md-12">
+							<h1>
+								Welcome Everyone<br>
+								Your comfort is our priority
+							</h1>
+							<a href="#" class="head-btn btn text-uppercase">Start Searching</a>
+						</div>
+						<div class="banner-content col-lg-12 col-md-12">
+							<h1>
+								Enjoy your trip<br>
+								with our services
+							</h1>
+							<a href="#" class="head-btn btn text-uppercase">Start Searching</a>
+						</div>
+					</div>
+											<div class="carousel-trigger">
+							<div class="next-trigger"><span class="lnr lnr-arrow-up"></span></span></div>
+							<div class="prev-trigger"><span class="lnr lnr-arrow-down"></span></span></div>
+						</div>
+				</div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+			<!-- Start service Area -->
+			<section class="service-area section-gap" id="facilities">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-md-8 pb-80 header-text">
+							<h1>Room Types</h1>
+							<p>
+								Here we display the look of the room at our hotel
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 single-service">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/f1.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+						<div class="col-lg-4 col-md-4 single-service">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/f2.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+						<div class="col-lg-4 col-md-4 single-service">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/f3.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End service Area -->
+
+			<!-- Start about Area -->
+			<section class="about-area">
+				<div class="container-fluid">
+					<div class="row d-flex justify-content-end align-items-center">
+						<div class="col-lg-6 col-md-12 about-left no-padding">
+							<img class="img-fluid" src="<?php echo base_url('assets/img/about-img.jpg')?>" alt="">
+						</div>
+						<div class="col-lg-6 col-md-12 about-right">
+							<h1>A very Lovely Welcome <br>
+							to our Hotel</h1>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.
+							</p>
+							<button class="btn btn-black">Make Package of your own</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End about Area -->
+
+			<!-- Start facilities Area -->
+			<section class="facilities-area section-gap" id="service">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-md-8 pb-80 header-text">
+							<h1>Superb Facilities</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> labore  et dolore magna aliqua.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="sigle-facilities col-lg-4 col-md-6">
+							<span class="fa fa-coffee" style="font-size:30px"></span>
+							<h4>Coffee Time</h4>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+							</p>
+						</div>
+						<div class="sigle-facilities col-lg-4 col-md-6">
+							<span class="fa fa-futbol-o" style="font-size:30px"></span>
+							<h4>Sport Center</h4>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+							</p>
+						</div>
+						<div class="sigle-facilities col-lg-4 col-md-6">
+							<span class="fa fa-gamepad" style="font-size:30px"></span>
+							<h4>Game Center</h4>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+							</p>
+						</div>
+						<div class="sigle-facilities col-lg-4 col-md-6">
+							<span class="fa fa-wifi" style="font-size:30px"></span>
+							<h4>WiFi</h4>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+							</p>
+						</div>
+						<div class="sigle-facilities col-lg-4 col-md-6">
+							<span class="fa fa-cutlery" style="font-size:30px"></span>
+							<h4>Restaurant</h4>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+							</p>
+						</div>
+						<div class="sigle-facilities col-lg-4 col-md-6">
+							<span class="fa fa-glass" style="font-size:30px"></span>
+							<h4>Bar</h4>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
+							</p>
+						</div>
 
 
+					</div>
+				</div>
+			</section>
+			<!-- End facilities Area -->
 
-<div class="container">
+			<!-- Start gallery Area -->
+			<section class="gallery-area">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-2 col-sm-6 single-gallery no-padding"">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/g1.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+						<div class="col-lg-2 col-sm-6 single-gallery no-padding"">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/g2.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+						<div class="col-lg-2 col-sm-6 single-gallery no-padding"">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/g3.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+						<div class="col-lg-2 col-sm-6 single-gallery no-padding"">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/g4.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+						<div class="col-lg-2 col-sm-6 single-gallery no-padding"">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/g5.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+						<div class="col-lg-2 col-sm-6 single-gallery no-padding"">
+						  <div class="content">
+						    <a href="#" target="_blank">
+						      <div class="content-overlay"></div>
+						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/g6.jpg')?>" alt="">
+						      <div class="content-details fadeIn-bottom">
+						        <h3 class="content-title">Resort Holiday package</h3>
+						      </div>
+						    </a>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End gallery Area -->
 
-    <table class="table table-hover" size= "100">
-        <thead>
-            <tr>
-                
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-            </tr>
-        </tbody>
-    </table><br><br>
 
-<img src="<?=base_url()?>assets/images/flight_path_en.png" class="img-responsive" alt="Image">
-<br>
-<img src="<?=base_url()?>assets/images/12488479382838125411.png" class="img-responsive" alt="Image">
-<br>
+			<!-- Start booking Area -->
+			<section class="booking-area" id="book">
+				<div class="container">
+					<div class="row">
+						<div class="booking-wrap col-lg-12">
+							<div class="row d-flex justify-content-center">
+								<div class="col-md-10 pb-80 header-text">
+									<h1>Book a Room</h1>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> labore  et dolore magna aliqua.
+									</p>
+								</div>
+							</div>
+					  		<form class="booking-form" id="booking" action="booking.php">
+								 <div class="row">
+								    <div class="col-lg-6 col-md-12">
+								    	<div class="row">
+									    	<div class="col-lg-6">
+												<input type="text" name="fname" class="single-in form-control" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required="">
+												<input type="text" name="no_telp" class="single-in form-control" placeholder="Telephone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telephone'" required="">
+												<input id="datepicker" name="arrival" class="single-in form-control"  onblur="this.placeholder = 'Arrival'" type="text" placeholder="Arrival" required>
+												<select name="room-type" class="app-select form-control" required>
+													<option data-display="Room Type">Room Type</option>
+													<option value="1">DELUXE ROOM</option>
+													<option value="2">SUITE ROOM</option>
+													<option value="3">PRESIDENTIAL ROOM</option>
+												</select>
+												<select name="adults" class="app-select form-control" required>
+													<option data-display="Adults">Adults</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="3">4</option>
+													<option value="3">5</option>
+												</select>
+									    	</div>
+									    	<div class="col-lg-6">
+									    		<input type="text" name="lname" class="single-in form-control" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required="">
+												<input type="text" name="email" class="single-in form-control" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" required="">
+									    		<input id="datepicker2" name="departure" class="single-in form-control"  onblur="this.placeholder = 'Departure'" type="text" placeholder="Departure" required>
+									    		<select name="no-room" class="app-select form-control" required>
+													<option data-display="Number Of Rooms">Number Of Rooms</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">4</option>
+													<option value="3">5</option>
+													<option value="3">6</option>
+													<option value="3">7</option>
+													<option value="3">8</option>
+													<option value="3">9</option>
+													<option value="3">10</option>
+												</select>
+												<select name="clild" class="app-select form-control">
+													<option data-display="Childs">Childs</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="3">4</option>
+													<option value="3">5</option>
+												</select>
+									    	</div>
+								    	</div>
+								    </div>
+								    <div class="col-lg-6 col-md-12">
+								      	<textarea class="single-in form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
+								    </div>
+										<div class="col-lg-12 d-flex justify-content-center send-btn">
+										<button class="primary-btn mt-20 text-uppercase ">book room<span class="lnr lnr-arrow-right"></span></button>
+									</div>
 
-</body>
+									<div class="alert-msg"></div>
+								  </div>
+					  		</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End booking Area -->
 
 
-<center>
-<h2 class="text-center  wowload fadeInUp">Services</h2>
-<div class="row grid team  wowload fadeInUpBig"><br>
+			<!-- Start contact-info Area -->
+			<section class="contact-info-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="single-info col-lg-3 col-md-6">
+							 <h4>Visit Our Office</h4>
+							 <p>
+							 	56/8, bir uttam qazi nuruzzaman
+							 	road, west panthapath, kalabagan,
+							 	Dhanmondi, Dhaka - 1205
+							 </p>
+						</div>
+						<div class="single-info col-lg-3 col-md-6">
+							 <h4>Let’s call us</h4>
+							 <p>
+								Phone 01: 012-6532-568-9746 <br>
+								Phone 02: 012-6532-568-9748 <br>
+								FAX: 02-6532-568-746
+							 </p>
+						</div>
+						<div class="single-info col-lg-3 col-md-6">
+							 <h4>Let’s Email Us</h4>
+							 <p>
+								hello@colorlib.com <br>
+								mainhelpinfo@colorlib.com <br>
+								infohelp@colorlib.com
+							 </p>
+						</div>
+						<div class="single-info col-lg-3 col-md-6">
+							 <h4>Customer Support</h4>
+							 <p>
+							 	support@colorlib.com <br>
+								emergencysupp@colorlib.com <br>
+								extremesupp@colorlib.com
+							 </p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End contact-info Area -->
 
-    <div class=" col-sm-4 col-xs-5">
-    <figure class="effect-chico">
-        <img src="<?=base_url()?>assets/images/premium-flatbedfa107ce1257b6f46a9c8ff01009f6536.jpg" class="img-responsive" alt="Image">
-        <figcaption>
-            <p><b>Premium FlatBed</b><br>Experience affordable luxury with our award-winning Flatbed which also comes with other awesome perks<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
-        </figcaption>
-    </figure>
-    </div>
+			<!-- start footer Area -->
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3  col-md-6 col-sm-12">
+							<div class="single-footer-widget">
+								<h6>About Us</h6>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4  col-md-6 col-sm-12">
+							<div class="single-footer-widget">
+								<h6>Newsletter</h6>
+								<p>Stay update with our latest</p>
+								<div class="" id="mc_embed_signup">
 
-    <div class=" col-sm-4 col-xs-6">
-    <figure class="effect-chico">
-        <img src="<?=base_url()?>assets/images/quiet-zone.jpg" class="img-responsive" alt="Image">
-        <figcaption>            
-            <p><b>Quite Zone</b><br>Want more peace and quiet on board? Choose to fly with minimal disturbance in our Quiet Zone<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
-        </figcaption>
-    </figure>
-    </div>
+										<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
 
-    <div class=" col-sm-4 col-xs-6">
-    <figure class="effect-chico">
-        <img src="<?=base_url()?>assets/images/emergency-exit-row.jpg" class="img-responsive" alt="Image">
-        <figcaption>
-            <p><b>Emergency Row Seats</b><br>Want to occupy the seats on our emergency rows? Please ensure you fulfill our safety criteria<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>          
-        </figcaption>
-    </figure>
-    </div>
+										<div class="d-flex flex-row">
 
-    
-  </div>
-</center><br><br><br>
-    <p align= "center"><font color= "red"><i>* Please note that all seat options are subject to our terms and conditions of carriage. You may be reassigned to another seat for operational, safety and security reasons.</i></font></p>
-  <br>
-  <img src="<?=base_url()?>assets/images/Screen Shot 2017-04-24 at 2.57.01 PM.png" class="img-responsive" alt="Image">
-  <br>
+											<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
 
-    <p align= "center"><font size= "6">Airbus A320</font></p>
-      <img src="<?=base_url()?>assets/images/a320.png" class="img-responsive" alt="Image"><br><br>
-    <p align= "center"><font size= "4">Airbus A320neo</font></p>
-      <img src="<?=base_url()?>assets/images/airasia-neo-a320.png" class="img-responsive" alt="Image">
 
- <table class="table table-hover" size= "100">
-        <thead>
-          <tr>
-            <th>
-              <div>
-                <div style="width: 12%;" id="seatOptionIcon">
-                <div style="width: 34%;" id="seatOptionIcon"><img src="https://www.airasia.com/cdn/aa-images/common/pick-a-seat-hot-seat_7.gif?sfvrsn=2"></div>
-                <div id="seatOptionIcon">Hot Seats</div>
-              </div>
-            </th>
-            <th>
-                <div style="width: 16%;" id="seatOptionIcon">
-                <div style="width: 25%;" id="seatOptionIcon"><img src="https://www.airasia.com/cdn/aa-images/common/pick-a-seat-standard-seat_7.gif?sfvrsn=2"></div>
-                <div id="seatOptionIcon">Standard Seats</div>
-              </div>
-            </th>
-            <th>
-                <div style="width: 12%;" id="seatOptionIcon">
-                <div style="width: 34%;" id="seatOptionIcon"><img src="https://www.airasia.com/cdn/aa-images/common/pick-a-seat-exit-door_131.gif?sfvrsn=2"></div>
-                <div id="seatOptionIcon">Exit door</div>
-              </div>
-            </th>
-            <th>    
-                <div style="width: 16%;" id="seatOptionIcon">
-                <div style="width: 25%;" id="seatOptionIcon"><img src="https://www.airasia.com/cdn/aa-images/common/pick-a-seat-emergency-exit_7.gif?sfvrsn=2"></div>
-                <div id="seatOptionIcon">
-                Emergency exit</div>
-                </div>
-            </th>
-            <th>
-                <div style="width: 12%;" id="seatOptionIcon">
-                <div style="width: 34%;" id="seatOptionIcon"><img src="https://www.airasia.com/cdn/aa-images/common/pick-a-seat-lavatory_7.gif?sfvrsn=2"></div>
-                <div id="seatOptionIcon">Lavatory Seats</div>
-                </div>
-            </th>
-          </div>
-        </center>
-      </tr>
-        </tbody>
-    </table><br><br>
+				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+				                            	<div style="position: absolute; left: -5000px;">
+													<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+												</div>
 
-<center>
-    <div class=" col-sm-4 col-xs-5">
-    <figure class="effect-chico">
-        <img src="<?=base_url()?>assets/images/seats-premiumflatbed.jpg" class="img-responsive" alt="Image">
-        <figcaption>
-            <p><b>Premium FlatBed</b><br>Experience affordable luxury with our award-winning Premium Flatbed. This spacious seat reclines to a full flatbed when desired, as well as other features that ensure your utmost comfort on board. You’ll also receive additional perks when you choose Premium<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
-        </figcaption>
-    </figure>
-    </div>
+											<!-- <div class="col-lg-4 col-md-4">
+												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+											</div>  -->
+										</div>
+										<div class="info"></div>
+										</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3  col-md-6 col-sm-12">
+							<div class="single-footer-widget mail-chimp">
+								<h6 class="mb-20">Instragram Feed</h6>
+								<ul class="instafeed d-flex flex-wrap">
+									<li><img src="<?php echo base_url('assets/img/i1.jpg')?>" alt=""></li>
+									<li><img src="<?php echo base_url('assets/img/i2.jpg')?>" alt=""></li>
+									<li><img src="<?php echo base_url('assets/img/i3.jpg')?>" alt=""></li>
+									<li><img src="<?php echo base_url('assets/img/i4.jpg')?>" alt=""></li>
+									<li><img src="<?php echo base_url('assets/img/i5.jpg')?>" alt=""></li>
+									<li><img src="<?php echo base_url('assets/img/i6.jpg')?>" alt=""></li>
+									<li><img src="<?php echo base_url('assets/img/i7.jpg')?>" alt=""></li>
+									<li><img src="<?php echo base_url('assets/img/i8.jpg')?>" alt=""></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-12">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+						<p class="footer-text m-0">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						</p>
+					</div>
+				</div>
+			</footer>
+			<!-- End footer Area -->
 
-    <div class=" col-sm-4 col-xs-6">
-    <figure class="effect-chico">
-        <img src="<?=base_url()?>assets/images/seats-hotseats.jpg" class="img-responsive" alt="Image">
-        <figcaption>            
-            <p><b>Hot Seats</b><br>Hot Seats offer more space than Standard Seats. With the extra legroom, you will have more than enough space to stretch out. On top of that, you will also get to board first. Want some peace and quiet? Pre-book Hot Seats in the Quiet Zone.<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
-        </figcaption>
-    </figure>
-    </div>
-
-    <div class=" col-sm-4 col-xs-6">
-    <figure class="effect-chico">
-        <img src="<?=base_url()?>assets/images/seats-standardseats.jpg" class="img-responsive" alt="Image">
-        <figcaption>
-            <p><b>Standard Seats</b><br>Perfect spot for lovebirds and best friends. No matter the distance, nothing spells affordable comfort and privacy than being seated together without any distraction from a stranger. Your quality time begins here<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>          
-        </figcaption>
-    </figure>
-    </div>
-  </div>
-</center><br><br><br>
-</div>
-<?php $this->load->view('footer');?>
+			<script src="<?php echo base_url('assets/js/vendor/jquery-2.2.4.min.js')?>"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+			<script src="<?php echo base_url('assets/js/vendor/bootstrap.min.js')?>"></script>
+			<script src="<?php echo base_url('assets/js/owl.carousel.min.js')?>"></script>
+			<script src="<?php echo base_url('assets/js/jquery.nice-select.min.js')?>"></script>
+			<script src="<?php echo base_url('assets/js/jquery.ajaxchimp.min.js')?>"></script>
+			<script src="<?php echo base_url('assets/js/jquery.sticky.js')?>"></script>
+			<script src="<?php echo base_url('assets/js/parallax.min.js')?>"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script src="<?php echo base_url('assets/js/jquery.magnific-popup.min.js')?>"></script>
+			<script src="<?php echo base_url('assets/js/main.js')?>"></script>
+		</body>
+	</html>
