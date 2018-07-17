@@ -18,7 +18,7 @@
             $this->load->view('admin/index');
             
         }
-    
+        
     }
     
     /* End of file Admin.php */

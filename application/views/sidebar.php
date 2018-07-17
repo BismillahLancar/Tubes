@@ -10,14 +10,20 @@
           </li>
           <li>
             <a class="" href="<?php echo site_url('/user') ?>">
-                          <i class="fa fa-user"></i>
-                          <span>Users</span>
-                      </a>
+                <i class="fa fa-user"></i>
+                <span>Users</span>
+                </a>
           </li>
           <li>
             <a class="" href="<?php echo site_url('/jurusan') ?>">
-                <i class="fa fa-bank"></i>
-                <span>Rooms</span>
+                <i class="fa fa-fighter-jet"></i>
+                <span>Destination</span>
+                </a>
+          </li>
+          <li>
+            <a class="" href="<?php echo site_url('/member') ?>">
+                <i class="fa fa-group"></i>
+                <span>Member</span>
                 </a>
           </li>
           <li class="sub-menu">

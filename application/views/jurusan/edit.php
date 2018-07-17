@@ -70,12 +70,12 @@
             value="<?php echo $data->tujuan ?>">
         </div>
         <div class="form-group">
-          <label for="Jurusan">Tujuan</label>
+          <label for="Jurusan">Jam Keberangkatan</label>
           <input type="text" class="form-control" id="jam_berangkat" name="jam_berangkat" placeholder="Masukkan Jam Berangkat"
             value="<?php echo $data->jam_berangkat ?>">
         </div>
         <div class="form-group">
-          <label for="Jurusan">Tujuan</label>
+          <label for="Jurusan">Tarif</label>
           <input type="text" class="form-control" id="harga" name="harga" placeholder="Masukkan Tarif Biaya"
             value="<?php echo $data->harga ?>">
         </div>

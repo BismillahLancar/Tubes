@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>User</title>
+  <title>Edit Member</title>
 
   <!-- Bootstrap CSS -->
   <link href="<?php echo base_url('assets/vendor/css/bootstrap.min.css" rel="stylesheet')?>">
@@ -54,60 +54,41 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <!--overview start-->
+
+    <!--overview start-->
 
     <div class="container">
-      <legend>Daftar Pengguna</legend>
+      <legend>Edit Data Member</legend>
       <div class="col-xs-12 col-sm-12 col-md-12">
-      <form class="form-inline" action="<?php echo site_url('user/index/') ?>" method="post">
-          <input class="form-control" type="text" name="search" value="" placeholder="Search...">
-          <input class="btn btn-default" type="submit" name="filter" value="Go">
-      </form>
-        <table class="table table-striped">
-          <thead>
-            <th>No</th>
-            <th>Nama</th>
-            <th width="200">No Telp</th>
-            <th>Tujuan</th>
-            <th>
-              <a class="btn btn-primary" href="<?php echo site_url('user/create/') ?>">
-                Tambah
-              </a>
-            </th>
-          </thead>
-          <?php if(isset($user)) { ?>
-          <tbody>
-            <?php foreach($user as $row) { ?>
-            <tr>
-              <td><?php echo $start+=1 ?></td>
-              <td><?php echo $row->nama ?></td>
-              <td><?php echo $row->telepon ?></td>
-              <td><?php echo $row->tujuan ?></td>
-              <td>
-                <?php echo form_open('user/destroy/'.$row->id); ?>
-                <a class="btn btn-info" href="<?php echo site_url('user/edit/'.$row->id) ?>">
-                  Ubah
-                </a>
-                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</button>
-                <?php echo form_close() ?>
-              </td>
-            </tr>
-            <?php } ?>
-          </tbody>
-        </table>
+      <?php echo form_open_multipart('member/update/'.$data->id_admin); ?>
 
-        <?php echo $links;
-          }
-          else
-          {
-            echo "Tidak Ada Data";
-          } ?> 
-      
+        <?php echo form_hidden('id', $data->id_admin) ?>
+        
+        <div class="form-group">
+          <label for="Admin">Nama</label>
+          <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Member"
+            value="<?php echo $data->nama ?>">
+        </div>
+        <div class="form-group">
+          <label for="Admin">Username</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username"
+            value="<?php echo $data->username ?>">
+        </div>
+        <div class="form-group">
+          <label for="Admin">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password"
+            value="<?php echo $data->password ?>">
+        </div>
+
+        <?php echo $error;?>
+
+        <a class="btn btn-info" href="<?php echo site_url('member/') ?>">Kembali</a>
+        <button type="submit" class="btn btn-primary">OK</button>
+
+      <?php echo form_close(); ?>
       </div>
     </div>
-
-    <?php $this->load->view('layouts/base_end') ?>
-
+    
       </section>
       <div class="text-right">
         <div class="credits">
