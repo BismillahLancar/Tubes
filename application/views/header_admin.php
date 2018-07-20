@@ -4,7 +4,7 @@
       </div>
 
       <!--logo start-->
-      <a href="<?php echo site_url('/admin') ?>" class="logo">EASY<span class="lite">.COM</span></a>
+      <a href="<?php echo site_url('/admin') ?>" class="logo">EA<span class="lite">SY</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">

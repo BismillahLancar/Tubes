@@ -10,6 +10,12 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Home');
+		$jurusan = $this->Jurusan_model->list();
+
+        $data = [
+                    'title' => 'Project Besar',
+                    'jurusan' => $jurusan,
+                ];
+		$this->load->view('Home',$data);
     }
 }

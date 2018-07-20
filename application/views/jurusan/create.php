@@ -68,6 +68,11 @@
         value="<?php echo set_value('jurusan'); ?>">  
       </div>
       <div class="form-group">
+          <label for="Tanggal">Tanggal Keberangkatan</label>
+          <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan Tanggal Keberangkatan"
+        value="<?php echo set_value('tanggal'); ?>">  
+      </div>
+      <div class="form-group">
           <label for="Berangkat">Jam Keberangkatan</label>
           <input type="text" class="form-control" id="jam_berangkat" name="jam_berangkat" placeholder="Masukkan Jam Berangkat"
         value="<?php echo set_value('jam_berangkat'); ?>">  

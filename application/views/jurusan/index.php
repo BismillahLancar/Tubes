@@ -63,8 +63,9 @@
         <thead>
           <th>No</th>
           <th>Tujuan</th>
+          <th>Tanggal Keberangkatan</th>
           <th>Jam Berangkat</th>
-          <th>Tarif Pemberangkatan</th>
+          <th>Tarif Keberangkatan</th>
           <th>
             <a class="btn btn-primary" href="<?php echo site_url('jurusan/create') ?>">
               Tambah
@@ -79,6 +80,9 @@
             </td>
             <td>
               <?php echo $row->tujuan ?>
+            </td>
+            <td>
+              <?php echo $row->tanggal ?>
             </td>
             <td>
               <?php echo $row->jam_berangkat ?>

@@ -16,7 +16,7 @@
           </li>
           <li>
             <a class="" href="<?php echo site_url('/jurusan') ?>">
-                <i class="fa fa-fighter-jet"></i>
+                <i class="fa fa-plane"></i>
                 <span>Destination</span>
                 </a>
           </li>

@@ -70,6 +70,11 @@
             value="<?php echo $data->tujuan ?>">
         </div>
         <div class="form-group">
+          <label for="Tanggal">Tanggal Keberangkatan</label>
+          <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan Tanggal Keberangkatan"
+          value="<?php echo $data->tanggal ?>">  
+        </div>
+        <div class="form-group">
           <label for="Jurusan">Jam Keberangkatan</label>
           <input type="text" class="form-control" id="jam_berangkat" name="jam_berangkat" placeholder="Masukkan Jam Berangkat"
             value="<?php echo $data->jam_berangkat ?>">

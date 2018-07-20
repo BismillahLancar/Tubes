@@ -32,6 +32,7 @@ class Jurusan extends CI_Controller {
     {
         // Ambil value 
         $jurusan = $this->input->post('jurusan');
+        $tanggal = $this->input->post('tanggal');
         $jam = $this->input->post('jam_berangkat');
         $harga = $this->input->post('harga');
 
@@ -45,6 +46,7 @@ class Jurusan extends CI_Controller {
             // Insert data
             $data = [
                 'tujuan' => $jurusan,
+                'tanggal' => $tanggal,
                 'jam_berangkat' => $jam,
                 'harga'  => $harga
                 ];
@@ -83,6 +85,7 @@ class Jurusan extends CI_Controller {
         //Ambil Value
         $kode=$this->input->post('kode');
         $jurusan = $this->input->post('jurusan');
+        $tanggal = $this->input->post('tanggal');
         $jam = $this->input->post('jam_berangkat');
         $harga = $this->input->post('harga');
 
@@ -93,6 +96,7 @@ class Jurusan extends CI_Controller {
         {
             $data = [ 
                 'tujuan'     => $jurusan,
+                'tanggal'     => $tanggal,
                 'jam_berangkat' => $jam,
                 'harga'    => $harga
             ];
