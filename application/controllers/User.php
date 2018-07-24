@@ -6,8 +6,6 @@ class User extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        // $this->load->model('Jurusan_model');
-        // $this->load->model('User_model');
     }
 
     public function create($error='')
@@ -26,30 +24,22 @@ class User extends CI_Controller {
         $data = [
             'data' => $user
         ];
-        $this->load->view('user/show', $data);
+        $this->load->view('user/index', $data);
     }
     
     public function store()
     {
-        // Ambil value 
-        $nama = $this->input->post('nama');
-        $jurusan = $this->input->post('jurusan');
-        $no = $this->input->post('telepon');
-
-        // Validasi Nama dan Matakuliah
-        $dataval = $nama;
-        $errorval = $this->validate($dataval);
-
-        //tambah data
-        $data = [
-            'nama' => $nama,
-            'kode' => $jurusan,
-            'telepon'   => $no
-        ];
-
-        $result = $this->User_model->insert($data);
-
-        redirect(user);
+        $set = array(
+			'nama' => $this->input->post("nama"),
+            'telepon' => $this->input->post("telepon"),  
+            'email' => $this->input->post("email"),                       
+			'messege' => $this->input->post("messege"),
+			'tanggal' => date("Y-m-d"),
+			'fk_jurusan' => $this->input->post('jurusan')
+		);
+		$this->db->insert("pemesanan",$set);
+		
+		redirect('Home','refresh');
     }
 
     public function edit($id,$error='')
@@ -72,20 +62,26 @@ class User extends CI_Controller {
         $id=$this->input->post('id');
         $nama = $this->input->post('nama');
         $no = $this->input->post('telepon');
+        $email = $this->input->post('email');
         $jurusan = $this->input->post('jurusan');
+        $pesan = $this->input->post('messege');
 
         // Validasi Nama dan Matakuliah
         $dataval = [
             'nama' => $nama,
             'jurusan' => $jurusan,
-            'telepon'   => $telepon
+            'telepon'   => $no,
+            'email'   => $email,
+            'messege' => $pesan
             ];
         $errorval = $this->validate($dataval);
 
         $data = [
             'nama'     => $nama,
-            'kode'     => $jurusan,
-            'telepon'  => $no
+            'fk_jurusan' => $jurusan,
+            'telepon'  => $no,
+            'email'  => $email,
+            'messege'  => $pesan
             ];
         $result = $this->User_model->update($id,$data);
 
@@ -175,7 +171,7 @@ class User extends CI_Controller {
             ];
             $this->pagination->initialize($config);
             $data = [
-                'user' => $this->User_model->list($limit, $start, $search),
+                'pemesanan' => $this->User_model->list($limit, $start, $search),
                 'start' => $start,
                 'links' => $this->pagination->create_links()
             ];

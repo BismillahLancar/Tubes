@@ -17,7 +17,7 @@
       </div>
 
       <div class="top-nav notification-row">
-        <!-- notificatoin dropdown start-->
+        <!-- notificatoin dropdown start -->
         <ul class="nav pull-right top-menu">
 
           <!-- task notificatoin start -->

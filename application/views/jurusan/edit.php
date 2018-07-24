@@ -84,6 +84,11 @@
           <input type="text" class="form-control" id="harga" name="harga" placeholder="Masukkan Tarif Biaya"
             value="<?php echo $data->harga ?>">
         </div>
+        <div class="form-group">
+          <label for="Stok">Stok Tiket</label>
+          <input type="text" class="form-control" id="stok" name="stok" placeholder="Masukkan Stok Tiket"
+            value="<?php echo $data->stok ?>">
+        </div>
 
         <?php echo $error;?>
 

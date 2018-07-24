@@ -78,7 +78,7 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-4 single-service">
 						  <div class="content">
-						    <a href="https://www.airasia.com/my/en/inflight-comforts/premium-flatbed.page" target="_blank">
+						    <a href="<?php echo site_url("Home/premium") ?>" target="_blank">
 						      <div class="content-overlay"></div>
 						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/premium1.jpg')?>" alt="">
 						      <div class="content-details fadeIn-bottom">
@@ -89,7 +89,7 @@
 						</div>
 						<div class="col-lg-4 col-md-4 single-service">
 						  <div class="content">
-						    <a href="https://www.airasia.com/my/en/inflight-comforts/seat-options.page#quietzone" target="_blank">
+						    <a href="<?php echo site_url("Home/quite") ?>" target="_blank">
 						      <div class="content-overlay"></div>
 						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/quiet.jpg')?>" alt="">
 						      <div class="content-details fadeIn-bottom">
@@ -100,7 +100,6 @@
 						</div>
 						<div class="col-lg-4 col-md-4 single-service">
 						  <div class="content">
-						    <a href="https://support.airasia.com/s/article/Who-can-occupy-emergency-seats-en?language=en_GB" target="_blank">
 						      <div class="content-overlay"></div>
 						  		 <img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/emergency.jpg')?>" alt="">
 						      <div class="content-details fadeIn-bottom">
@@ -116,88 +115,31 @@
 
 			<!-- Start about Area -->
 			<section class="about-area">
-				<div class="container-fluid">
-					<div class="row d-flex justify-content-end align-items-center">
-						<div class="col-lg-6 col-md-12 about-left no-padding">
-							<img class="img-fluid" src="<?php echo base_url('assets/img/promo.gif')?>" alt="">
-						</div>
-						<div class="col-lg-6 col-md-12 about-right">
-							<h1>A very Lovely Welcome <br>
-							to our Hotel</h1>
-							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.
-							</p>
-							<button class="btn btn-black">Make Package of your own</button>
+				<div class="container">
+				<a href="https://www.airasia.com/id/en/our-fares/value-pack.page" target="_blank">
+					<div class="row d-flex justify-content-center">
+						<div class="banner-content col-lg-12 col-md-12">
+							<img class="image" src="<?php echo base_url('assets/img/value.png')?>" alt="">
 						</div>
 					</div>
+					</a>
 				</div>
 			</section>
 			<!-- End about Area -->
 
 			<!-- Start facilities Area -->
-			<section class="facilities-area section-gap" id="service">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-md-8 pb-80 header-text">
-							<h1>Facilities</h1>
-							<p>
-							You will receive many facilities for AirAsia flights between them
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-briefcase" style="font-size:30px"></span>
-							<h4>Free Baggage</h4>
-							<p>
-								40kg of checked baggage for all the luggage you need. Do not hesitate to pack all your stuff
-							</p>
-						</div>
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-cutlery" style="font-size:30px"></span>
-							<h4>Free Food</h4>
-							<p>
-								Choose from a wide selection of dishes, snacks and drinks to keep you content all the way
-							</p>
-						</div>
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-plane" style="font-size:30px"></span>
-							<h4>Change Flight</h4>
-							<p>
-								Unlimited flight change up to 2 hours before the original departure time, and 4 hours before the new departure time, the tariff difference will apply
-							</p>
-						</div>
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-heartbeat" style="font-size:30px"></span>
-							<h4>Insurance</h4>
-							<p>
-								1 hour Hour Luggage and Punctuality Guarantee
-							</p>
-						</div>
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-cutlery" style="font-size:30px"></span>
-							<h4>Restaurant</h4>
-							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
-							</p>
-						</div>
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-glass" style="font-size:30px"></span>
-							<h4>Bar</h4>
-							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
 			<!-- End facilities Area -->
 
-			<!-- Start gallery Area -->
+			<!-- Start information Area -->
+			<section class="facilities-area section-gap" id="service">
 			<div class="container">
 			<div class="row d-flex justify-content-center">
-    <h1>List of Destination</h1>
-    <div class="col-xs-12 col-sm-12 col-md-12">
+			<div class="col-md-8 pb-80 header-text">
+    		<h1>List of Destination</h1>
+				<p>This information about schedule of flight</p>
+			</div>
+			</div>
+    		<div class="col-xs-12 col-sm-12 col-md-12">
       <table class="table table-striped">
         <thead>
           <th>No</th>
@@ -231,8 +173,9 @@
 			</div>
     </div>
   </div>
+	</section>
 
-			<!-- End gallery Area -->
+			<!-- End information Area -->
 
 			<!-- Start booking Area -->
 			<section class="booking-area" id="book">
@@ -247,53 +190,34 @@
 									</p>
 								</div>
 							</div>
-					  		<form class="booking-form" id="booking" action="booking.php">
+
+					  		<?php echo form_open('User/store'); ?>
+								
 								 <div class="row">
 								    <div class="col-lg-6 col-md-12">
-								    	<div class="row">
+								    	<div class="row d-flex justify-content-center">
 									    	<div class="col-lg-6">
-												<input type="text" name="name" class="single-in form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" required="">
-												<input type="text" name="no_telp" class="single-in form-control" placeholder="Telephone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telephone'" required="">
-												<input id="datepicker" name="arrival" class="single-in form-control"  onblur="this.placeholder = 'Arrival'" type="text" placeholder="Arrival" required>
-												<select name="room-type" class="app-select form-control" required>
-													<option data-display="Room Type">Seat Type</option>
-													<option value="1">DELUXE ROOM</option>
-													<option value="2">SUITE ROOM</option>
-													<option value="3">PRESIDENTIAL ROOM</option>
+												<input type="text" name="nama" class="single-in form-control" placeholder="Nama" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama'" required="">
+												<input type="text" name="telepon" class="single-in form-control" placeholder="Telepon" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telepon'" required="">
+												</div>
+									    	<div class="col-lg-6">
+												<select name="jurusan" class="app-select form-control" required>
+													<option data-display="Jurusan">Jurusan</option>
+													<?php foreach($jurusan as $row) { ?>
+      											<option value="<?php echo $row->kode ?>"><?php echo $row->tujuan ?></option>
+   												<?php } ?>
 												</select>
-									    	</div>
-									    	<div class="col-lg-6">
 												<input type="text" name="email" class="single-in form-control" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" required="">
-									    		<input id="datepicker2" name="departure" class="single-in form-control"  onblur="this.placeholder = 'Departure'" type="text" placeholder="Departure" required>
-									    		<select name="no-room" class="app-select form-control" required>
-													<option data-display="Number Of Rooms">Number Of Rooms</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">4</option>
-													<option value="3">5</option>
-													<option value="3">6</option>
-													<option value="3">7</option>
-													<option value="3">8</option>
-													<option value="3">9</option>
-													<option value="3">10</option>
-												</select>
-												<select name="clild" class="app-select form-control">
-													<option data-display="Childs">Childs</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="3">4</option>
-													<option value="3">5</option>
-												</select>
 									    	</div>
 								    	</div>
 								    </div>
 								    <div class="col-lg-6 col-md-12">
-								      	<textarea class="single-in form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
+								      	<textarea class="single-in form-control" name="messege" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
 								    </div>
 										<div class="col-lg-12 d-flex justify-content-center send-btn">
-										<button class="primary-btn mt-20 text-uppercase " type="submit">Book Ticket<span class="lnr lnr-arrow-right"></span></button>
+										<button class="primary-btn mt-20 text-uppercase" onclick="return confirm('Data anda telah disimpan')" type="submit">Book Ticket<span class="lnr lnr-arrow-right"></span></button>
 									</div>
+									<?php echo form_close() ?>
 
 									<div class="alert-msg"></div>
 								  </div>
@@ -304,7 +228,6 @@
 			</section>
 			<!-- End booking Area -->
 
-
 			<!-- Start contact-info Area -->
 			<section class="contact-info-area section-gap">
 				<div class="container">
@@ -312,33 +235,30 @@
 						<div class="single-info col-lg-3 col-md-6">
 							 <h4>Visit Our Office</h4>
 							 <p>
-							 	56/8, bir uttam qazi nuruzzaman
-							 	road, west panthapath, kalabagan,
-							 	Dhanmondi, Dhaka - 1205
+							 POLITEKNIK NEGERI MALANG Jl. Soekarno Hatta No. 9 Malang
+								Telp : (0341) 404424, 404425
+								Fax : (0341) 404420
 							 </p>
 						</div>
 						<div class="single-info col-lg-3 col-md-6">
 							 <h4>Let’s call us</h4>
 							 <p>
-								Phone 01: 012-6532-568-9746 <br>
-								Phone 02: 012-6532-568-9748 <br>
+								Phone 01: 081-191-751-431 <br>
+								Phone 02: 085-755-195-005 <br>
 								FAX: 02-6532-568-746
 							 </p>
 						</div>
 						<div class="single-info col-lg-3 col-md-6">
 							 <h4>Let’s Email Us</h4>
 							 <p>
-								hello@colorlib.com <br>
-								mainhelpinfo@colorlib.com <br>
-								infohelp@colorlib.com
+								rifky_syahbana@gmail.com <br>
+								abrorrahmatullah@gmail.com <br>
 							 </p>
 						</div>
 						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Customer Support</h4>
+							 <h4>Visit Our Organization</h4>
 							 <p>
-							 	support@colorlib.com <br>
-								emergencysupp@colorlib.com <br>
-								extremesupp@colorlib.com
+							 	polinema.ac.id
 							 </p>
 						</div>
 					</div>

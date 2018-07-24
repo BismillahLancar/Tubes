@@ -42,77 +42,33 @@
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-8 pb-80 header-text">
-							<h1>Premium Flatbed</h1>
+							<h1>Quite Zone</h1>
 							<p>
-							Flying in comfort is now yours to enjoy with the Premium Flatbed. This spacious seat reclines to become a full flatbed when desired. 
-							It also features a privacy screen, an adjustable head and foot rest, as well as a pillow and duvet for maximum comfort.
-							In addition, it also comes with a reading light and universal power port.
+							Lack of uninterrupted noise - no children under 10 years of age</br>
+                            Light room lighting</br>
+                            Your food will be served faster
 							</p>
 						</div>
 					</div>
-					<div class="row d-flex justify-content-center">
-						<div class="col-lg-4 col-md-4 single-service">
-						  <div class="content">
-						  	<img class="content-image img-fluid d-block mx-auto" src="<?php echo base_url('assets/img/premium.jpg')?>" alt="">
-						  </div>
-						</div>
-					</div>
+					<center><p><strong>Ikuti tur Zona Tenang kami. Ikuti tur Zona Tenang kami.</strong></p>
+                    <iframe style="border: 0px;" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2smy!4v1480629829570!6m8!1m7!1s1i6K4VT_qv8AAAQvvLMdlQ!2m2!1d2.740400895537764!2d101.684836918681!3f146.15!4f-22.510000000000005!5f0.7820865974627469" width="800" height="500" frameborder="0"></iframe></center>
 				</div>
 			</section>
 			<!-- End service Area -->
 
 			<!-- Start about Area -->
-			<section class="about-area">
-				<div class="container-fluid">
-					<div class="row d-flex justify-content-center">
-						<div class="col-lg-6 col-md-12 single-service">
-							<img class="img-fluid" src="<?php echo base_url('assets/img/prem.png')?>" alt="">
-						</div>
-					</div>
-				</div>
-			</section>
 			<!-- End about Area -->
 
 			<!-- Start facilities Area -->
-			<section class="facilities-area section-gap" id="service">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-md-8 pb-80 header-text">
-							<h1>Superb Facilities</h1>
-							<p>
-							And not only that, you will also receive benefits - if you choose Premium Flatbed for AirAsia X flights:
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-coffee" style="font-size:30px"></span>
-							<h4>Coffee Time</h4>
-							<p>
-								Coffee time on any journey more than 5 hours
-							</p>
-						</div>
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-heartbeat" style="font-size:30px"></span>
-							<h4>Insurance</h4>
-							<p>
-							1 hour Hour Luggage and Punctuality Guarantee
-							</p>
-						</div>
-						<div class="sigle-facilities col-lg-4 col-md-6">
-							<span class="fa fa-briefcase" style="font-size:30px"></span>
-							<h4>Priority Baggage</h4>
-							<p>
-							Get your luggage before others after landing.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
+			
 			<!-- End facilities Area -->
 
 			<!-- Start gallery Area -->
-			<center><iframe width="640" height="360" frameborder="0" src="https://www.youtube.com/embed/zzW_2iDPULU?autoplay=0&amp;rel=0"></iframe></center>
+                <center><p><strong>Ingin melihat lebih lanjut? Ikuti tur kabin A320 kami.</strong></p>
+                <div><iframe style="border: 0px;" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2smy!4v1480056760238!6m8!1m7!1sGENTbGHDATAAAAQvvMviIA!2m2!1d2.744359417834486!2d101.6886272879772!3f328.16!4f-23.120000000000005!5f0.5235315891000208" width="800" height="500" frameborder="0"></iframe></div>
+                
+                <p><strong>Ingin melihat lebih lanjut? Ikuti tur kabin A330 kami.</strong></p>
+                <iframe style="border: 0px;" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2smy!4v1480056382206!6m8!1m7!1sm6pbsZriBGIAAAQvvLMdjA!2m2!1d2.740366512194749!2d101.6848589663559!3f141.82!4f-16.33!5f0.7820865974627469" width="800" height="500" frameborder="0"></iframe></center>
 			<!-- End gallery Area -->
 
 

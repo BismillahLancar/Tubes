@@ -57,7 +57,7 @@
         <!--overview start-->
 
     <div class="container">
-      <legend>Daftar Pengguna</legend>
+      <legend>Daftar Pemesan</legend>
       <div class="col-xs-12 col-sm-12 col-md-12">
       <form class="form-inline" action="<?php echo site_url('user/index/') ?>" method="post">
           <input class="form-control" type="text" name="search" value="" placeholder="Search...">
@@ -68,27 +68,34 @@
             <th>No</th>
             <th>Nama</th>
             <th width="200">No Telp</th>
+            <th>Email</th>
             <th>Tujuan</th>
+            <th>Pesan</th>
             <th>
               <a class="btn btn-primary" href="<?php echo site_url('user/create/') ?>">
                 Tambah
               </a>
             </th>
           </thead>
-          <?php if(isset($user)) { ?>
+          <?php if(isset($pemesanan)) { ?>
           <tbody>
-            <?php foreach($user as $row) { ?>
+            <?php foreach($pemesanan as $row) { ?>
             <tr>
               <td><?php echo $start+=1 ?></td>
               <td><?php echo $row->nama ?></td>
               <td><?php echo $row->telepon ?></td>
+              <td><?php echo $row->email ?></td>
               <td><?php echo $row->tujuan ?></td>
+              <td><?php echo $row->messege ?></td>
               <td>
                 <?php echo form_open('user/destroy/'.$row->id); ?>
                 <a class="btn btn-info" href="<?php echo site_url('user/edit/'.$row->id) ?>">
                   Ubah
                 </a>
                 <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</button>
+                <a class="btn btn-primary" href="<?php echo site_url() ?>">
+                Download
+              </a>        
                 <?php echo form_close() ?>
               </td>
             </tr>

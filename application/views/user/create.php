@@ -70,6 +70,11 @@
       <input type="text" class="form-control" id="telepon" name="telepon" placeholder="Masukkan No Telepon"
 		  value="<?php echo set_value('telepon'); ?>">  
     </div>
+    <div class="form-group">
+          <label for="Tanggal">Tanggal Keberangkatan</label>
+          <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan Tanggal Keberangkatan"
+        value="<?php echo set_value('tanggal'); ?>">  
+      </div>
 	<div class="form-group">
     <label for="Tujuan">Tujuan</label>
     <select class="form-control" id="jurusan" name="jurusan">

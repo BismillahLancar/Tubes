@@ -38,7 +38,7 @@
               <li><a class="" href="grids.html">Grids</a></li>
             </ul>
           </li>
-          <li class="sub-menu">
+          <!-- <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
                           <span>Forms</span>
@@ -72,7 +72,7 @@
               <li><a class="" href="blank.html">Blank Page</a></li>
               <li><a class="" href="404.html">404 Error</a></li>
             </ul>
-          </li>
+          </li> -->
 
         </ul>
         <!-- sidebar menu end-->

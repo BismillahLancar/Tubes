@@ -10,7 +10,7 @@
 						<nav class="hide">
 							<a href="#home">Home</a>
 							<a href="#facilities">Seat</a>
-							<a href="#service">Facilities</a>
+							<a href="#service">Destinations</a>
 							<a href="#book">Booking</a>
 							<a href="<?php echo base_url('login') ?>">Login</a>
 						</nav>

@@ -35,6 +35,7 @@ class Jurusan extends CI_Controller {
         $tanggal = $this->input->post('tanggal');
         $jam = $this->input->post('jam_berangkat');
         $harga = $this->input->post('harga');
+        $stok = $this->input->post('stok');
 
         $dataval = $jurusan;
         $errorval = $this->validate($dataval);
@@ -48,7 +49,8 @@ class Jurusan extends CI_Controller {
                 'tujuan' => $jurusan,
                 'tanggal' => $tanggal,
                 'jam_berangkat' => $jam,
-                'harga'  => $harga
+                'harga'  => $harga,
+                'stok'  => $stok
                 ];
             $result = $this->Jurusan_model->insert($data);
             
@@ -88,6 +90,7 @@ class Jurusan extends CI_Controller {
         $tanggal = $this->input->post('tanggal');
         $jam = $this->input->post('jam_berangkat');
         $harga = $this->input->post('harga');
+        $stok = $this->input->post('stok');
 
         $dataval = $jurusan;
         $errorval = $this->validate($dataval);
@@ -98,7 +101,8 @@ class Jurusan extends CI_Controller {
                 'tujuan'     => $jurusan,
                 'tanggal'     => $tanggal,
                 'jam_berangkat' => $jam,
-                'harga'    => $harga
+                'harga'    => $harga,
+                'stok'    => $stok
             ];
             $result = $this->Jurusan_model->update($kode,$data);
 

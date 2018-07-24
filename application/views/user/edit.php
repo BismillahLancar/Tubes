@@ -57,7 +57,7 @@
         <!--overview start-->
 
     <div class="container">
-  <legend>Edit Data Pengguna</legend>
+  <legend>Edit Data Pemesan</legend>
   <div class="col-xs-12 col-sm-12 col-md-12">
   <?php echo form_open_multipart('user/update/'.$data->id); ?>
 
@@ -72,10 +72,14 @@
       <input type="text" class="form-control" id="telepon" name="telepon" placeholder="Masukkan No Telepon"
         value="<?php echo $data->telepon ?>">
     </div>
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email"
+        value="<?php echo $data->email ?>">
+    </div>
   	<div class="form-group">
       <label for="Tujuan">Tujuan</label>
       <select class="form-control" id="jurusan" name="jurusan">
-      
       <?php
         foreach($datajab as $rowjab) {
           $s='';
@@ -88,6 +92,11 @@
       <?php } ?>
       
       </select>
+    </div>
+    <div class="form-group">
+      <label for="Pesan">Pesan</label>
+      <input type="text" class="form-control" id="messege" name="messege" placeholder="Masukkan No Telepon"
+        value="<?php echo $data->messege ?>">
     </div>
 
     <?php echo $error;?>

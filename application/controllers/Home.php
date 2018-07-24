@@ -17,5 +17,29 @@ class Home extends CI_Controller {
                     'jurusan' => $jurusan,
                 ];
 		$this->load->view('Home',$data);
-    }
+	}
+	
+	public function premium()
+	{
+		$this->load->view('premium');
+	}
+
+	public function quite()
+	{
+		$this->load->view('quite');
+	}
+
+	public function pesan()
+	{
+		$set = array(
+			'nama' => $this->input->post("nama"),
+			'telepon' => $this->input->post("telepon"),
+			'messege' => $this->input->post("messege"),
+			'tanggal' => date("Y-m-d"),
+			'fk_jurusan' => $this->input->post('jurusan')
+		);
+		$this->db->insert("pemesanan",$set);
+		
+		redirect('Home','refresh');
+	}
 }

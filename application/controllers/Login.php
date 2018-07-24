@@ -15,7 +15,6 @@ class Login extends CI_Controller {
         } else {
             $error = [ 'error' => $error ];
             $this->load->view('admin/login', $error);
-            
         }
     }
     

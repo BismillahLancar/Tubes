@@ -66,6 +66,7 @@
           <th>Tanggal Keberangkatan</th>
           <th>Jam Berangkat</th>
           <th>Tarif Keberangkatan</th>
+          <th>Stok Tiket</th>
           <th>
             <a class="btn btn-primary" href="<?php echo site_url('jurusan/create') ?>">
               Tambah
@@ -89,6 +90,9 @@
             </td>
             <td>
               <?php echo $row->harga ?>
+            </td>
+            <td>
+              <?php echo $row->stok ?>
             </td>
             <td>
               <?php echo form_open('jurusan/destroy/'.$row->kode); ?>
