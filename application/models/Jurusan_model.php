@@ -5,7 +5,9 @@ class Jurusan_model extends CI_Model {
 
     public function list()
     {
-        $query = $this->db->get('jurusan');
+        $this->db->select('*');
+        $this->db->from('jurusan');
+        $query = $this->db->get();
         return $query->result();
     }
 
@@ -17,8 +19,10 @@ class Jurusan_model extends CI_Model {
 
     public function show($kode)
     {
+        $this->db->select('*');
+        $this->db->from('jurusan'); 
         $this->db->where('kode', $kode);
-        $query = $this->db->get('jurusan');
+        $query = $this->db->get();
         return $query->row();
     }
 

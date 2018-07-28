@@ -18,23 +18,23 @@
         <tr align=center>    
             <th>No</th>
             <th>Nama</th>
-            <th>Username</th>
-            <th>Password</th>
+            <th>No Telp</th>
+            <th>Jenis Pesawat</th>
+            <th>Asal - Tujuan</th>
+            <th>Berangkat</th>
+            <th>Total Harga</th>
+            <th>Pesan</th>
         </tr>
         <?php $number = 1; foreach($laporan as $row) { ?>
         <tr align=center>    
-        <td>
-              <?php echo $number++ ?>
-            </td>
-            <td>
-              <?php echo $row->nama ?>
-            </td>
-            <td>
-              <?php echo $row->username ?>
-            </td>
-            <td>
-              <?php echo $row->password ?>
-            </td>
+        <td><?php echo $number++ ?></td>
+              <td><?php echo $row->nama ?></td>
+              <td><?php echo $row->telepon ?></td>
+              <td><?php echo $row->pesawat ?></td>
+              <td><?php echo $row->tujuan ?></td>
+              <td><?php echo $row->tanggal ?></td>
+              <td><?php echo $row->total ?></td>
+              <td><?php echo $row->messege ?></td>
         </tr>
         <?php } ?>
     </table>    

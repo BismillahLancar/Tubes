@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Creative - Bootstrap Admin Template</title>
+  <title>Tambah User</title>
 
   <!-- Bootstrap CSS -->
   <link href="<?php echo base_url('assets/vendor/css/bootstrap.min.css" rel="stylesheet')?>">
@@ -71,10 +71,14 @@
 		  value="<?php echo set_value('telepon'); ?>">  
     </div>
     <div class="form-group">
-          <label for="Tanggal">Tanggal Keberangkatan</label>
-          <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan Tanggal Keberangkatan"
-        value="<?php echo set_value('tanggal'); ?>">  
-      </div>
+       <label for="Jenis">Jenis Pesawat</label>
+       <select name="pesawat" class="app-select form-control" required>
+				<option data-display="Jenis">Tipe Pesawat</option>
+				<?php foreach($jenis as $row) { ?>
+      	<option value="<?php echo $row->id_jenis ?>"><?php echo $row->pesawat ?></option>
+   			<?php } ?>
+			</select>
+    </div>
 	<div class="form-group">
     <label for="Tujuan">Tujuan</label>
     <select class="form-control" id="jurusan" name="jurusan">

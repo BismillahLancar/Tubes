@@ -69,6 +69,9 @@
             <a class="btn btn-primary" href="<?php echo site_url('member/create') ?>">
               Tambah
             </a>
+            <a class="btn btn-default" href="<?php echo base_url() ?>laporan/">
+              Print
+            </a>
           </th>
         </thead>
         <tbody>
@@ -110,7 +113,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
-          Designed by <a href="https://github.com/BismillahLancar">Abror_Rifky</a>
+          Designed by <a href="https://github.com/BismillahLancar">EASY</a>
         </div>
       </div>
       </section>

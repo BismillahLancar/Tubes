@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Creative - Bootstrap Admin Template</title>
+  <title>Edit User</title>
 
   <!-- Bootstrap CSS -->
   <link href="<?php echo base_url('assets/vendor/css/bootstrap.min.css" rel="stylesheet')?>">
@@ -73,9 +73,17 @@
         value="<?php echo $data->telepon ?>">
     </div>
     <div class="form-group">
-      <label for="Email">Email</label>
-      <input type="text" class="form-control" id="email" name="email" placeholder="Masukkan Email"
-        value="<?php echo $data->email ?>">
+       <label for="Jenis">Jenis Pesawat</label>
+       <select name="pesawat" class="app-select form-control" required>
+				<option data-display="Jenis">Tipe Pesawat</option>
+				<?php foreach($jenis as $row) {
+          $type='';
+          if($data->id_jenis == $row->id_jenis)
+          { $type='selected'; } 
+        ?>
+         <option value="<?php echo $row->id_jenis ?>" <?php echo $type ?>><?php echo $row->pesawat ?></option>
+   			<?php } ?>
+			</select>
     </div>
   	<div class="form-group">
       <label for="Tujuan">Tujuan</label>
@@ -90,8 +98,17 @@
           <?php echo $rowjab->tujuan  ?>
         </option>
       <?php } ?>
-      
       </select>
+    </div>
+    <div class="form-group">
+      <label for="Tanggal">Tanggal Berangkat</label>
+      <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan Tanggal Berangkat"
+        value="<?php echo $data->tanggal ?>">
+    </div>
+    <div class="form-group">
+      <label for="Total">Total Harga</label>
+      <input type="text" class="form-control" id="total" name="total" placeholder="Masukkan Total Harga"
+        value="<?php echo $data->total ?>">
     </div>
     <div class="form-group">
       <label for="Pesan">Pesan</label>

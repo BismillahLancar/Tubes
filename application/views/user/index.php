@@ -67,14 +67,16 @@
           <thead>
             <th>No</th>
             <th>Nama</th>
-            <th width="200">No Telp</th>
-            <th>Email</th>
+            <th>No Telp</th>
+            <th>Jenis Pesawat</th>
             <th>Tujuan</th>
+            <th>Tanggal</th>
+            <th>Total Harga</th>
             <th>Pesan</th>
             <th>
-              <a class="btn btn-primary" href="<?php echo site_url('user/create/') ?>">
-                Tambah
-              </a>
+            <a class="btn btn-default" href="<?php echo base_url() ?>laporan/laporanuser">
+              Print
+            </a>
             </th>
           </thead>
           <?php if(isset($pemesanan)) { ?>
@@ -84,18 +86,17 @@
               <td><?php echo $start+=1 ?></td>
               <td><?php echo $row->nama ?></td>
               <td><?php echo $row->telepon ?></td>
-              <td><?php echo $row->email ?></td>
+              <td><?php echo $row->pesawat ?></td>
               <td><?php echo $row->tujuan ?></td>
+              <td><?php echo $row->tanggal ?></td>
+              <td><?php echo $row->total ?></td>
               <td><?php echo $row->messege ?></td>
               <td>
                 <?php echo form_open('user/destroy/'.$row->id); ?>
                 <a class="btn btn-info" href="<?php echo site_url('user/edit/'.$row->id) ?>">
                   Ubah
                 </a>
-                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</button>
-                <a class="btn btn-primary" href="<?php echo site_url() ?>">
-                Download
-              </a>        
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Hapus</button>       
                 <?php echo form_close() ?>
               </td>
             </tr>
@@ -124,7 +125,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
-          Designed by <a href="https://github.com/BismillahLancar">Abror_Rifky</a>
+          Designed by <a href="https://github.com/BismillahLancar">EASY</a>
         </div>
       </div>
       </section>

@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Jurusan</title>
+  <title>Edit Jenis</title>
 
   <!-- Bootstrap CSS -->
   <link href="<?php echo base_url('assets/vendor/css/bootstrap.min.css" rel="stylesheet')?>">
@@ -56,62 +56,28 @@
       <section class="wrapper">
 
     <!--overview start-->
+
     <div class="container">
-    <legend>Daftar Tujuan Destinasi</legend>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <table class="table table-striped">
-        <thead>
-          <th>No</th>
-          <th>Tujuan</th>
-          <th>Tanggal Keberangkatan</th>
-          <th>Jam Berangkat</th>
-          <th>Tarif Keberangkatan</th>
-          <th>Stok Tiket</th>
-          <th>
-            <a class="btn btn-primary" href="<?php echo site_url('jurusan/create') ?>">
-              Tambah
-            </a>
-            <a class="btn btn-default" href="<?php echo base_url() ?>laporan/destinasi">
-              Print
-            </a>
-          </th>
-        </thead>
-        <tbody>
-          <?php $number = 1; foreach($jurusan as $row) { ?>
-          <tr>
-            <td>
-              <?php echo $number++ ?>
-            </td>
-            <td>
-              <?php echo $row->tujuan ?>
-            </td>
-            <td>
-              <?php echo $row->tanggal ?>
-            </td>
-            <td>
-              <?php echo $row->jam_berangkat ?>
-            </td>
-            <td>
-              <?php echo $row->harga ?>
-            </td>
-            <td>
-              <?php echo $row->stok ?>
-            </td>
-            <td>
-              <?php echo form_open('jurusan/destroy/'.$row->kode); ?>
-              <a class="btn btn-info" href="<?php echo site_url('jurusan/edit/'.$row->kode) ?>">
-                Ubah
-              </a>
-              <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
-              <?php echo form_close() ?>
-            </td>
-          </tr>
-          <?php } ?>
-        </tbody>
-      </table>
+      <legend>Edit Data Jenis Pesawat</legend>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+      <?php echo form_open_multipart('jenis/update/'.$data->id_jenis); ?>
+
+        <?php echo form_hidden('id_jenis', $data->id_jenis) ?>
+        
+        <div class="form-group">
+          <label for="Jenis">Jenis Pesawat</label>
+          <input type="text" class="form-control" id="pesawat" name="pesawat" placeholder="Masukkan Jenis Pesawat"
+            value="<?php echo $data->pesawat ?>">
+        </div>
+        <?php echo $error;?>
+
+        <a class="btn btn-info" href="<?php echo site_url('jenis/') ?>">Kembali</a>
+        <button type="submit" class="btn btn-primary">OK</button>
+
+      <?php echo form_close(); ?>
+      </div>
     </div>
-  </div>
-  
+    
       </section>
       <div class="text-right">
         <div class="credits">
@@ -121,7 +87,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
-          Designed by <a href="https://github.com/BismillahLancar">EASY</a>
+          Designed by <a href="https://github.com/BismillahLancar">Abror_Rifky</a>
         </div>
       </div>
       </section>

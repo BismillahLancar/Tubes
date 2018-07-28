@@ -16,24 +16,32 @@
 <center><h1><?php echo "Laporan $title" ?></h1></center>
     <table align=center>
         <tr align=center>    
-            <th>No</th>
-            <th>Nama</th>
-            <th>Username</th>
-            <th>Password</th>
+        <th>No</th>
+          <th>Tujuan</th>
+          <th>Keberangkatan</th>
+          <th>Jam Berangkat</th>
+          <th>Tarif</th>
+          <th>Stok Tiket</th>
         </tr>
         <?php $number = 1; foreach($laporan as $row) { ?>
         <tr align=center>    
-        <td>
+            <td>
               <?php echo $number++ ?>
             </td>
             <td>
-              <?php echo $row->nama ?>
+              <?php echo $row->tujuan ?>
             </td>
             <td>
-              <?php echo $row->username ?>
+              <?php echo $row->tanggal ?>
             </td>
             <td>
-              <?php echo $row->password ?>
+              <?php echo $row->jam_berangkat ?>
+            </td>
+            <td>
+              <?php echo $row->harga ?>
+            </td>
+            <td>
+              <?php echo $row->stok ?>
             </td>
         </tr>
         <?php } ?>

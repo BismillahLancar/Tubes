@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Jurusan</title>
+  <title>Jenis Pesawat</title>
 
   <!-- Bootstrap CSS -->
   <link href="<?php echo base_url('assets/vendor/css/bootstrap.min.css" rel="stylesheet')?>">
@@ -57,49 +57,25 @@
 
     <!--overview start-->
     <div class="container">
-    <legend>Daftar Tujuan Destinasi</legend>
+    <legend>Daftar Jenis Pesawat</legend>
     <div class="col-xs-12 col-sm-12 col-md-12">
       <table class="table table-striped">
         <thead>
           <th>No</th>
-          <th>Tujuan</th>
-          <th>Tanggal Keberangkatan</th>
-          <th>Jam Berangkat</th>
-          <th>Tarif Keberangkatan</th>
-          <th>Stok Tiket</th>
-          <th>
-            <a class="btn btn-primary" href="<?php echo site_url('jurusan/create') ?>">
-              Tambah
-            </a>
-            <a class="btn btn-default" href="<?php echo base_url() ?>laporan/destinasi">
-              Print
-            </a>
-          </th>
+          <th>Jenis Pesawat</th>
         </thead>
         <tbody>
-          <?php $number = 1; foreach($jurusan as $row) { ?>
+          <?php $number = 1; foreach($jenis as $row) { ?>
           <tr>
             <td>
               <?php echo $number++ ?>
             </td>
             <td>
-              <?php echo $row->tujuan ?>
+              <?php echo $row->pesawat ?>
             </td>
             <td>
-              <?php echo $row->tanggal ?>
-            </td>
-            <td>
-              <?php echo $row->jam_berangkat ?>
-            </td>
-            <td>
-              <?php echo $row->harga ?>
-            </td>
-            <td>
-              <?php echo $row->stok ?>
-            </td>
-            <td>
-              <?php echo form_open('jurusan/destroy/'.$row->kode); ?>
-              <a class="btn btn-info" href="<?php echo site_url('jurusan/edit/'.$row->kode) ?>">
+              <?php echo form_open('jenis/destroy/'.$row->id_jenis); ?>
+              <a class="btn btn-info" href="<?php echo site_url('jenis/edit/'.$row->id_jenis) ?>">
                 Ubah
               </a>
               <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?')">Hapus</button>

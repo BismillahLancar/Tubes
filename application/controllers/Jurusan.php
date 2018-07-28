@@ -24,7 +24,9 @@ class Jurusan extends CI_Controller {
 
     public function create()
     {
-        $error = array('error' => ' ' );
+        $error = [
+            'error' => ' ',
+        ];
         $this->load->view('jurusan/create', $error);
     }
 
@@ -56,7 +58,7 @@ class Jurusan extends CI_Controller {
             
             if ($result)
             {
-                redirect(jurusan);
+                redirect('jurusan');
             }
             else
             {
@@ -75,6 +77,8 @@ class Jurusan extends CI_Controller {
     {
       // TODO: tampilkan view edit data
         $jurusan = $this->Jurusan_model->show($kode);
+
+        
         $data = [
             'data' => $jurusan,
             'error' => $error

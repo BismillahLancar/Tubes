@@ -9,7 +9,7 @@ class LapBes extends CI_Controller
         parent::__construct();
         
         $this->load->helper('url', 'form'); 
-        $this->load->model('Model File');
+        $this->load->model('Mode');
         
     }
     

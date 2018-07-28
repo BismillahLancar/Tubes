@@ -12,12 +12,8 @@
       <p><?php echo $data->telepon ?></p>
     </div>
     <div class="form-group">
-      <label for="email">Email</label>
-      <p><?php echo $data->email ?></p>
-    </div>
-    <div class="form-group">
-      <label for="tanggal">Tanggal Keberangkatan</label>
-      <p><?php echo $data->tanggal ?></p>
+      <label for="Jenis">Jenis Pesawat</label>
+      <p><?php echo $data->pesawat ?></p>
     </div>
     <div class="form-group">
       <label for="tujuan">Tujuan</label>

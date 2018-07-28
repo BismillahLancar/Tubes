@@ -11,10 +11,12 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$jurusan = $this->Jurusan_model->list();
+		$jenis = $this->Jenis_model->list();
 
         $data = [
                     'title' => 'Project Besar',
-                    'jurusan' => $jurusan,
+					'jurusan' => $jurusan,
+					'jenis' => $jenis,
                 ];
 		$this->load->view('Home',$data);
 	}
@@ -36,7 +38,8 @@ class Home extends CI_Controller {
 			'telepon' => $this->input->post("telepon"),
 			'messege' => $this->input->post("messege"),
 			'tanggal' => date("Y-m-d"),
-			'fk_jurusan' => $this->input->post('jurusan')
+			'fk_jurusan' => $this->input->post('jurusan'),
+			'pesawat' => $this->input->post("pesawat")
 		);
 		$this->db->insert("pemesanan",$set);
 		

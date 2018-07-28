@@ -45,14 +45,14 @@
 								Welcome Everyone<br>
 								Your comfort is our priority
 							</h1>
-							<a href="https://www.airasia.com/en/home.page" class="head-btn btn text-uppercase" target="_blank">Start Searching</a>
+							<a href="https://www.airasia.com/en/home.page" class="head-btn btn text-uppercase" target="_blank">Air Asia Website</a>
 						</div>
 						<div class="banner-content col-lg-12 col-md-12">
 							<h1>
 								Enjoy your trip<br>
 								with our services
 							</h1>
-							<a href="https://www.airasia.com/en/home.page" class="head-btn btn text-uppercase" target="_blank">Start Searching</a>
+							<a href="https://www.airasia.com/en/home.page" class="head-btn btn text-uppercase" target="_blank">Air Asia Website</a>
 						</div>
 					</div>
 											<div class="carousel-trigger">
@@ -63,7 +63,9 @@
 				</div>
 			</section>
 			<!-- End banner Area -->
-
+			<br><br>
+			<center><p><h1>AWESOME AirAsia</h1></p><br>
+			<iframe width="640" height="360" frameborder="0" src="https://www.youtube.com/embed/pKA1tUn3qiE?autoplay=0&amp;rel=0"></iframe></center>
 			<!-- Start service Area -->
 			<section class="service-area section-gap" id="facilities">
 				<div class="container">
@@ -147,6 +149,7 @@
 					<th>Schedule</th>
           <th>Time</th>
           <th>Price</th>
+					<th>Stock</th>
         </thead>
         <tbody>
           <?php $number = 1; foreach($jurusan as $row) { ?>
@@ -165,6 +168,9 @@
             </td>
             <td>
               <?php echo $row->harga ?>
+            </td>
+						<td>
+              <?php echo $row->stok ?>
             </td>
           </tr>
           <?php } ?>
@@ -207,7 +213,13 @@
       											<option value="<?php echo $row->kode ?>"><?php echo $row->tujuan ?></option>
    												<?php } ?>
 												</select>
-												<input type="text" name="email" class="single-in form-control" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" required="">
+												<select name="jenis" class="app-select form-control" required>
+													<option data-display="Jenis">Tipe Pesawat</option>
+														<?php foreach($jenis as $row) { ?>
+      										<option value="<?php echo $row->id_jenis ?>">
+														<?php echo $row->pesawat ?></option>
+   													<?php } ?>
+												</select>
 									    	</div>
 								    	</div>
 								    </div>

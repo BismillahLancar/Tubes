@@ -7,12 +7,13 @@ class User_model extends CI_Model {
     {
         $this->db->select('*');
         $this->db->join('jurusan', 'jurusan.kode = pemesanan.fk_jurusan');
+        $this->db->join('jenis', 'pemesanan.id_jenis = jenis.id_jenis');
         
         if ($search != 'null')
         { 
             $this->db->like('nama', $search);
+            $this->db->or_like('pesawat', $search);
             $this->db->or_like('telepon', $search);
-            $this->db->or_like('email', $search);
             $this->db->or_like('tujuan', $search);
         }
         
@@ -24,12 +25,13 @@ class User_model extends CI_Model {
     {
         $this->db->select('*');
         $this->db->join('jurusan', 'jurusan.kode = pemesanan.fk_jurusan');
-        
+        $this->db->join('jenis', 'pemesanan.id_jenis = jenis.id_jenis');
+
         if ($search != 'null')
         { 
             $this->db->like('nama', $search);
             $this->db->or_like('telepon', $search);
-            $this->db->or_like('email', $search);
+            $this->db->or_like('pesawat', $search);
             $this->db->or_like('tujuan', $search);
         }
         return $this->db->count_all_results('pemesanan');
@@ -65,6 +67,15 @@ class User_model extends CI_Model {
         $this->db->delete('pemesanan');
     }
 
+    public function laporanuser()
+    {
+        $this->db->select('*');
+        $this->db->from('pemesanan');
+        $this->db->join('jurusan', 'jurusan.kode = pemesanan.fk_jurusan');
+        $this->db->join('jenis', 'pemesanan.id_jenis = jenis.id_jenis');
+        $query = $this->db->get();
+        return $query->result();
+    }
 }
 
 /* End of file ModelName.php */

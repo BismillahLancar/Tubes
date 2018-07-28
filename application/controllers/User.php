@@ -10,17 +10,19 @@ class User extends CI_Controller {
 
     public function create($error='')
     {
+        $jenis = $this->Jenis_model->list();
         $jurusan = $this->Jurusan_model->list();
         $data = [
             'error' => $error,
-            'data' => $jurusan
+            'data' => $jurusan,
+            'jenis' => $jenis, 
         ];
         $this->load->view('user/create', $data);
     }
 
     public function show($id)
     {
-        $user = $this->User_model->show($id);
+        $user = $this->User_model->show($id_jenis);
         $data = [
             'data' => $user
         ];
@@ -29,13 +31,21 @@ class User extends CI_Controller {
     
     public function store()
     {
+        $id_jurusan = $this->input->post('jurusan');
+        $id_jenis = $this->input->post('jenis');
+        $jurusan = $this->Jurusan_model->show($id_jurusan);
+        $jenis = $this->Jenis_model->show($id_jenis);
+        $total = $jurusan->harga + $jenis->tarif;
+        $tanggal = $jurusan->tanggal;
+
         $set = array(
 			'nama' => $this->input->post("nama"),
-            'telepon' => $this->input->post("telepon"),  
-            'email' => $this->input->post("email"),                       
+            'telepon' => $this->input->post("telepon"),                         
 			'messege' => $this->input->post("messege"),
-			'tanggal' => date("Y-m-d"),
-			'fk_jurusan' => $this->input->post('jurusan')
+            'fk_jurusan' => $this->input->post('jurusan'),
+            'id_jenis' => $this->input->post("jenis"),
+            'total' => $total,
+            'tanggal' => $tanggal
 		);
 		$this->db->insert("pemesanan",$set);
 		
@@ -47,10 +57,12 @@ class User extends CI_Controller {
       // TODO: tampilkan view edit data
         $user = $this->User_model->show($id);
         $jurusan = $this->Jurusan_model->list();
+        $jenis = $this->Jenis_model->list();
         $data = [
             'data' => $user,
             'datajab' => $jurusan,
-            'error' => $error
+            'error' => $error,
+            'jenis' => $jenis
         ];
         $this->load->view('user/edit', $data);
       
@@ -62,16 +74,16 @@ class User extends CI_Controller {
         $id=$this->input->post('id');
         $nama = $this->input->post('nama');
         $no = $this->input->post('telepon');
-        $email = $this->input->post('email');
         $jurusan = $this->input->post('jurusan');
+        $pesawat = $this->input->post('pesawat');
         $pesan = $this->input->post('messege');
 
         // Validasi Nama dan Matakuliah
         $dataval = [
             'nama' => $nama,
             'jurusan' => $jurusan,
+            'id_jenis' => $pesawat,
             'telepon'   => $no,
-            'email'   => $email,
             'messege' => $pesan
             ];
         $errorval = $this->validate($dataval);
@@ -79,8 +91,8 @@ class User extends CI_Controller {
         $data = [
             'nama'     => $nama,
             'fk_jurusan' => $jurusan,
+            'id_jenis' => $pesawat,
             'telepon'  => $no,
-            'email'  => $email,
             'messege'  => $pesan
             ];
         $result = $this->User_model->update($id,$data);

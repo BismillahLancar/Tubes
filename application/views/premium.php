@@ -32,7 +32,7 @@
 		<body>
 
 			<!-- header -->
-			<?php $this->load->view('header'); ?>
+			<?php $this->load->view('headerkursi'); ?>
 
 			<!-- start banner Area -->
 			<!-- End banner Area -->

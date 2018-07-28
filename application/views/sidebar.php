@@ -2,7 +2,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li class="active">
+          <li class="">
             <a class="" href="<?php echo site_url('/admin') ?>">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
@@ -26,17 +26,11 @@
                 <span>Member</span>
                 </a>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="general.html">Elements</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
-            </ul>
+          <li>
+            <a class="" href="<?php echo site_url('/jenis') ?>">
+                <i class="fa fa-fighter-jet"></i>
+                <span>Jenis</span>
+                </a>
           </li>
           <!-- <li class="sub-menu">
             <a href="javascript:;" class="">

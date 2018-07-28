@@ -35,7 +35,7 @@ class Member_model extends CI_Model {
     public function delete($id_admin)
     {
         // TODO: tambahkan logic penghapusan data
-        $this->db->where('id', $id_admin);
+        $this->db->where('id_admin', $id_admin);
         $this->db->delete('admin');
     }
 }
